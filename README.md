@@ -1,5 +1,19 @@
 # helloworldapp-k8s
 
+The web app is accessible at:
+
+https://hellohandy.plural.cloud/
+
+Examples:
+
+https://hellohandy.plural.cloud/hello/Dave
+
+https://hellohandy.plural.cloud/dumplog
+
+https://hellohandy.plural.cloud/version
+
+https://hellohandy.plural.cloud/health
+
 The process:
 
 1. Created the webapp and tested it locally

@@ -21,4 +21,3 @@ hellohandy.plural.cloud {
     output file /opt/k8s/pce-logs/prod.hello
   }
 }
-
