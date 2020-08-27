@@ -1,0 +1,24 @@
+hellohandy.plural.cloud {
+  header {
+    -Server
+    +Content-Security-Policy "default-src 'self';"
+    +Feature-Policy "sync-xhr none;"
+    +Referrer-Policy "strict-origin-when-cross-origin"
+    +Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    +X-Content-Type-Options "nosniff"
+    +X-Frame-Options "SAMEORIGIN"
+    +X-XSS-Protection "1; mode=block"
+  }
+
+  reverse_proxy localhost:32359
+
+  encode {
+    gzip 9
+    zstd
+  }
+
+  log {
+    output file /opt/k8s/pce-logs/prod.hello
+  }
+}
+
