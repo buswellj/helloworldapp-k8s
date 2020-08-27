@@ -59,7 +59,7 @@ beb827820fc5: Pushed
 registry: digest: sha256:55a216e73a65921e4f304078e57fb2060d51cfe5a05e0ae39d337d28dee22005 size: 1993
 ```
 
-##webapp
+## webapp
 
 The web application is stored in webapp/handy-hello/
 
@@ -69,8 +69,8 @@ Express.JS. It supports the following endpoints:
 | Endpoint | Description |
 | -------- | ----------- |
 | / | Displays Hello World |
-| /<name>/hello | Where <name> is a name, display Hello name|
-| /hello/<name> | Does the same as the above endpoint |
+| /name/hello | Where name is a name, display Hello name|
+| /hello/name | Does the same as the above endpoint |
 | /version | Displays app version |
 | /health | health check endpoint |
 | /dumplog | dumps access logs for app |
@@ -125,7 +125,7 @@ variables.tf - variables used in the terraform code
 deploy-k8s directory contains the config for Caddy and the installation and
 setup quick scripts for k8s. These install k8s and update the OS on the Ubuntu
 20.04 AMI. note: I would use Packer to generate a new AMI in a real environment,
-to save time, I used this script
+to save time, I used this script.
 
 The scripts are executed k8s-install.sh, then k8s-setup.sh
 
