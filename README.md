@@ -14,17 +14,20 @@ https://hellohandy.plural.cloud/version
 
 https://hellohandy.plural.cloud/health
 
+See the file SUMMARY.md for why things were selected
+
 The process:
 
-1. Created the webapp and tested it locally
+1. Created the webapp and tested it locally with node then docker
 2. Created terraform to create the instance and security groups
 3. Deployed the k8s-install.sh script to install k8s on the instance
 4. Deployed the k8s-setup.sh script to finish the k8s configuration
 5. Locally built and pushed the docker image to the k8s registry
 6. Used the install-manifests.sh script to install the webapp
-7. Tested the local webapp in the browser
-8. Setup dns as hellohandy.plural.cloud to make it easier to access (TF via Linode)
+7. Setup dns as hellohandy.plural.cloud to make it easier to access (TF via Linode)
+8. Tested the webapp in the browser
 9. Established ssh tunnels to access the dashboard and cluster via Lens
+10. Wrote a quick monitoring script (requires valid slack webhook)
 
 The config for pushing to the private insecure registry are in
 docker-local/daemon.json and a script required after the config is updated locally.
