@@ -22,6 +22,8 @@ echo " [-] Enabling k8s Helm3"
 ssh -x -l $INV_TGT_USER $INV_TGT_HOST "sudo /snap/bin/microk8s.enable helm3"
 echo " [-] Enabling k8s registry"
 ssh -x -l $INV_TGT_USER $INV_TGT_HOST "sudo /snap/bin/microk8s.enable registry"
+echo " [-] Enabling k8s dashboard"
+ssh -x -l $INV_TGT_USER $INV_TGT_HOST "sudo /snap/bin/microk8s.enable dashboard"
 
 echo " [-] Setting up Docker Engine | Installing Docker"
 ssh -x -l $INV_TGT_USER $INV_TGT_HOST "sudo apt -y install docker.io"

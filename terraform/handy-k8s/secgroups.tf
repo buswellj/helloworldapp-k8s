@@ -31,6 +31,13 @@ resource "aws_security_group" "handyhello" {
   }
 
   ingress {
+    from_port   = 16443
+    to_port     = 16443
+    protocol    = "tcp"
+    cidr_blocks = [var.mgmt_ip]
+  }
+
+  ingress {
     from_port   = 30000
     to_port     = 40000
     protocol    = "tcp"
