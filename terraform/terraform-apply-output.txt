@@ -1,0 +1,23 @@
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_key_pair.myssh-key: Creating...
+aws_security_group.handyhello: Creating...
+aws_key_pair.myssh-key: Creation complete after 0s [id=myssh-key]
+aws_security_group.handyhello: Creation complete after 2s [id=sg-082edb825332f9d51]
+aws_instance.ec2k8s: Creating...
+aws_instance.ec2k8s: Still creating... [10s elapsed]
+aws_instance.ec2k8s: Still creating... [20s elapsed]
+aws_instance.ec2k8s: Still creating... [30s elapsed]
+aws_instance.ec2k8s: Creation complete after 34s [id=i-0e8f6d85b10fff787]
+
+Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+instance_ip = 18.224.40.4
+
+
