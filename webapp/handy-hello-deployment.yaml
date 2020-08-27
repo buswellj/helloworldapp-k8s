@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: handyhello-deployment
+  labels:
+    app: handy-hello
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: handy-hello
+  template:
+    metadata:
+      labels:
+        app: handy-hello
+    spec:
+      containers:
+      - name: handy-hello
+        image: localhost:32000/handy-hello:registry
+        ports:
+        - containerPort: 8666
+        livenessProbe:
+          initialDelaySeconds: 2
+          periodSeconds: 5
+          httpGet:
+            path: /health
+            port: 8666
+

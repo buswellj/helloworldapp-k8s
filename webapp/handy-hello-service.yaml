@@ -1,0 +1,16 @@
+apiVersion: v1                # API version
+kind: Service                 # Type of the kubernetes resource
+metadata:                     
+  name: handy-hello-svc       # Name of the kubernetes resource
+  labels:                     # Labels that will be applied to this resource
+    app: handy-hello
+spec:                         
+  type: NodePort             # The service will be exposed by opening a Port on each node and proxying it. 
+  selector:
+    app: handy-hello
+  ports:                      # Forward incoming connections on port 32359 to container port 8666
+  - name: http
+    port: 8666
+    nodePort: 32359
+    targetPort: 8666
+
